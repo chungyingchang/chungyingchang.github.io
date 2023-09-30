@@ -6,17 +6,18 @@
     <router-link to="/about">About</router-link>
   </nav> -->
   <router-view/>
+  <MyFooter/>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
-// import HelloWorld from './components/HelloWorld.vue'
+import MyFooter from './components/MyFooter.vue'
 
 export default {
   name: 'App',
   components: {
-    NavBar//,
-    //HelloWorld
+    NavBar,
+    MyFooter
   }
 }
 </script>
