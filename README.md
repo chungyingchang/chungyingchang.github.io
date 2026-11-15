@@ -11,16 +11,33 @@ A single static page with no build step. It uses a blue-and-gold palette with Li
 | `index.html` | The whole site: markup, CSS and the small nav script |
 | `photo.jpg` | Headshot (800×800). If it's missing, the initials "JC" show instead |
 | `resume.pdf` | CV. The "View Resume" button opens it in a new tab |
+| `gt-logo.jpg` | Georgia Tech icon (Education) |
+| `nthu-logo.jpg` | National Tsing Hua University icon (Education, Experience) |
+| `tsmc-logo.jpg` | TSMC icon (Experience) |
+| `trendmicro-logo.jpg` | Trend Micro icon (Experience) |
 | `.nojekyll` | Tells GitHub Pages to serve the files as-is, without running Jekyll |
 
 ## Editing
 
-- **Content:** edit the sections in `index.html` directly (About, Resume, Projects, Contact).
+- **Content:** edit the sections in `index.html` directly (About, Education, Experience, Skills, Projects, Contact).
 - **Colors:** change the CSS variables in `:root` at the top of `index.html`.
 - **Resume:** replace `resume.pdf` and keep the same filename.
+- **Icons:** 160×160 square images, shown at 28px with rounded corners before each school or company name.
 - **Preview:** run `python3 -m http.server`, then open <http://localhost:8000>.
 
 ## Changelog
+
+### 2026-11-14 — Resume sync and logos
+
+- Hero: blue-to-white gradient that flows into the white sections, uppercase serif name, headshot in a white ring with a gold border.
+- Education: added the Computational Data Analytics Track and the M.S. GPA. Split NTHU into separate M.S. and B.S. lines with their own dates, spaced evenly.
+- Renamed "Work" to "Experience" and synced it with the resume, in reverse chronological order with bullet points:
+  TSMC Software Engineer (2023–2026), Trend Micro Software Developer Intern (2022),
+  NTHU Teaching Assistant for CS3423 Operating Systems (2022), TSMC IT Engineer Intern (2021).
+- Added small school and company icons (Georgia Tech, NTHU, TSMC, Trend Micro).
+- Skills: grouped into ML & Statistics, Programming, Data Engineering & Cloud, Visualization and Languages.
+- Projects: Pineapple Identification System, Social Media Review Analysis (ASUS), AI CUP 2021 (2nd of 118).
+- Added the LinkedIn link.
 
 ### 2026-11-14 — Rebuild
 
@@ -29,3 +46,7 @@ A single static page with no build step. It uses a blue-and-gold palette with Li
 - Added the headshot (`photo.jpg`), the CV (`resume.pdf`) and the contact email.
 - Changed the resume button to "View Resume". It opens the PDF in a new tab instead of downloading it.
 - Added `.gitignore` entries for OS and editor files (`.DS_Store` and similar) and `.nojekyll`.
+
+## To do
+
+- [ ] Add more projects (e.g. Groovloop, Georgia Tech course projects)

@@ -129,6 +129,19 @@
     .entry + .entry { margin-top: 30px; }
     .entry h3 { color: var(--heading); font-size: 21px; font-weight: 700; line-height: 1.3; }
     .entry .info { font-style: italic; color: #6e7881; margin: 4px 0 10px; font-size: 15px; }
+    .entry.has-logo { display: grid; grid-template-columns: 28px 1fr; column-gap: 12px; align-items: start; }
+    .school-logo { width: 28px; height: 28px; border-radius: 6px; object-fit: cover; margin-top: 0; }
+    .entry.has-logo .info { margin: 0; line-height: 1.75; }
+    .entry.has-logo h3 + .info { margin-top: 4px; }
+    .entry.has-logo p { margin-top: 8px; }
+    .role + .role { margin-top: 0; }
+    .role p { margin-top: 6px; font-size: 14.5px; line-height: 1.7; position: relative; padding-left: 16px; }
+    .role p::before { content: ""; position: absolute; left: 2px; top: 0.75em; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+    .skill-group + .skill-group { margin-top: 18px; }
+    .skill-label { font-size: 13px; font-weight: 700; color: var(--blue); margin-bottom: 8px; letter-spacing: 0.3px; }
+    .card-meta { font-size: 12.5px; color: #6e7881; font-style: italic; margin-bottom: 10px; }
+    .logo-bordered { box-shadow: inset 0 0 0 1px #e3e6ee; border: 1px solid #e3e6ee; }
+    .logo-placeholder { display: grid; place-items: center; background: #eaf0fb; color: var(--blue); font-size: 8px; font-weight: 700; letter-spacing: 0; }
     .entry .info .date { font-style: normal; margin-left: 6px; }
     .skills { display: flex; flex-wrap: wrap; gap: 10px; }
     .skills span {
@@ -190,10 +203,10 @@
       </div>
       <div class="sub">M.S. Analytics @ Georgia Tech</div>
       <div class="socials">
-        <a href="https://github.com/chungyingchang" target="_blank" aria-label="GitHub">
+        <a href="https://github.com/chungyingchang" target="_blank" rel="noopener" aria-label="GitHub">
           <svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/chungyingchang/" target="_blank" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/chungyingchang/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
         </a>
         <a href="mailto:chungying.joechang@gmail.com" aria-label="Email">
@@ -244,42 +257,101 @@
       <div class="row">
         <div class="row-title"><h2>Education</h2></div>
         <div>
-          <div class="entry">
-            <h3>Georgia Institute of Technology</h3>
-            <div class="info">M.S. in Analytics <span class="date">· Aug 2026 – Dec 2027</span></div>
+          <div class="entry has-logo">
+            <img class="school-logo" src="gt-logo.jpg" alt="Georgia Tech logo" />
+            <div>
+              <h3>Georgia Institute of Technology</h3>
+              <div class="role">
+                <div class="info">M.S. in Analytics, Computational Data Analytics Track <span class="date">· Aug 2026 – Dec 2027</span></div>
+              </div>
+            </div>
           </div>
-          <div class="entry">
-            <h3>National Tsing Hua University</h3>
-            <div class="info">M.S. in Computer Science · B.S. in Electrical Engineering</div>
+          <div class="entry has-logo">
+            <img class="school-logo" src="nthu-logo.jpg" alt="NTHU logo" />
+            <div>
+              <h3>National Tsing Hua University</h3>
+              <div class="role">
+                <div class="info">M.S. in Computer Science (GPA 3.89/4.3) <span class="date">· Sep 2021 – Jul 2023</span></div>
+              </div>
+              <div class="role">
+                <div class="info">B.S. in Electrical Engineering <span class="date">· Sep 2017 – Jun 2021</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="row">
-        <div class="row-title"><h2>Work</h2></div>
+        <div class="row-title"><h2>Experience</h2></div>
         <div>
-          <div class="entry">
-            <h3>TSMC</h3>
-            <div class="info">Software Engineer, Design Technology Platform <span class="date">· Sep 2023 – Jul 2026</span></div>
-            <p>Developed and maintained PDK design-kit libraries. Automated the partner design-pattern
-              verification workflow end to end, and built the retrieval pipeline for an LLM/RAG prototype.</p>
+          <div class="entry has-logo">
+            <img class="school-logo" src="tsmc-logo.jpg" alt="TSMC logo" />
+            <div>
+              <h3>TSMC</h3>
+              <div class="role">
+                <div class="info">Software Engineer <span class="date">· Sep 2023 – Jul 2026</span></div>
+                <p>Automated an end-to-end pipeline for partner-submitted verification requests, reaching 90%+ hands-free execution and replacing ~10 minutes of manual work per request; used by 20 engineers.</p>
+                <p>Developed and maintained Process Design Kit (PDK) software libraries, delivering 50+ releases to 10+ tier-1 global clients; owned development through validation and mentored a UC Berkeley intern.</p>
+                <p>Prototyped an LLM-powered monitoring system (LLaMA + RAG) to automate upstream data tracking, covering data preprocessing, vector database design, and retrieval tuning.</p>
+              </div>
+            </div>
           </div>
-          <div class="entry">
-            <h3>National Tsing Hua University</h3>
-            <div class="info">Teaching Assistant, Operating Systems <span class="date">· Jan 2022 – Jun 2022</span></div>
+          <div class="entry has-logo">
+            <img class="school-logo" src="trendmicro-logo.jpg" alt="Trend Micro logo" />
+            <div>
+              <h3>Trend Micro</h3>
+              <div class="role">
+                <div class="info">Software Developer Intern <span class="date">· Jul 2022 – Aug 2022</span></div>
+                <p>Deployed scalable data pipelines with PySpark, AWS Glue, and Lambda to ingest TB-scale access logs into AWS RDS/S3, boosting processing throughput 5–6x.</p>
+                <p>Built SQL-driven Grafana and QuickSight dashboards over a 14-day rolling window, enabling near real-time anomaly detection for internal teams.</p>
+              </div>
+            </div>
           </div>
-          <div class="entry">
-            <h3>Trend Micro</h3>
-            <div class="info">Software Developer Intern, Core Tech</div>
+          <div class="entry has-logo">
+            <img class="school-logo" src="nthu-logo.jpg" alt="NTHU logo" />
+            <div>
+              <h3>National Tsing Hua University</h3>
+              <div class="role">
+                <div class="info">Teaching Assistant, CS3423 Operating Systems <span class="date">· Jan 2022 – Jun 2022</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="entry has-logo">
+            <img class="school-logo" src="tsmc-logo.jpg" alt="TSMC logo" />
+            <div>
+              <h3>TSMC</h3>
+              <div class="role">
+                <div class="info">IT Engineer Intern <span class="date">· Jul 2021 – Sep 2021</span></div>
+                <p>Automated CI/CD workflows with Azure Pipelines and developed custom Golang tools to standardize releases.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="row-title"><h2>Skills</h2></div>
-        <div class="skills">
-          <span>Python</span><span>SQL</span><span>Machine Learning</span><span>LLM / RAG</span>
-          <span>Data Pipelines</span><span>Automation</span><span>Linux</span>
+        <div>
+          <div class="skill-group">
+            <div class="skill-label">Machine Learning &amp; Statistics</div>
+            <div class="skills"><span>Scikit-Learn</span><span>TensorFlow</span><span>PyTorch</span><span>NLP</span><span>LLM / RAG</span><span>Hypothesis Testing</span><span>Regression</span></div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-label">Programming</div>
+            <div class="skills"><span>Python (Pandas, NumPy)</span><span>SQL</span><span>Shell</span><span>Golang</span><span>C/C++</span><span>SKILL++</span></div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-label">Data Engineering &amp; Cloud</div>
+            <div class="skills"><span>PySpark</span><span>AWS (Glue, Lambda, RDS, S3)</span><span>Docker</span><span>ETL</span><span>Data Modeling</span><span>CI/CD</span><span>Linux</span><span>Git</span></div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-label">Visualization</div>
+            <div class="skills"><span>Grafana</span><span>QuickSight</span><span>Matplotlib</span><span>Seaborn</span></div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-label">Languages</div>
+            <div class="skills"><span>English (Professional)</span><span>Mandarin Chinese (Native)</span></div>
+          </div>
         </div>
       </div>
 
@@ -292,19 +364,22 @@
       <h2 class="center">Projects</h2>
       <div class="grid">
         <div class="card">
-          <h3>Design-Pattern Verification Pipeline</h3>
-          <p>Automated a manual TSMC workflow: data processing, DRC verification, result reporting, and packaging for partner submissions.</p>
-          <div class="tags">AUTOMATION · DATA PIPELINE</div>
+          <h3>Pineapple Identification System</h3>
+          <div class="card-meta">Deep Learning &amp; Edge Computing · HSNLab, NTHU</div>
+          <p>End-to-end AIoT pipeline from field data collection and labeling to CNN training (86% test accuracy), optimized for edge inference on Raspberry Pi and deployed on a production line. Patent filed.</p>
+          <div class="tags">DEEP LEARNING · CNN · EDGE AI</div>
         </div>
         <div class="card">
-          <h3>LLM / RAG Retrieval Pipeline</h3>
-          <p>Owned the retrieval component of a 3–4 person team's LLM-based monitoring prototype.</p>
-          <div class="tags">LLM · RAG · PYTHON</div>
+          <h3>Social Media Review Analysis</h3>
+          <div class="card-meta">ASUS Enterprise Talent Program</div>
+          <p>Scraped and structured 2,500+ forum posts and cross-validated brand share of voice against a campus survey; delivered reports to ASUS product managers identifying top purchase drivers.</p>
+          <div class="tags">PYTHON · WEB SCRAPING · ANALYTICS</div>
         </div>
         <div class="card">
-          <h3>AI CUP 2021 — 2nd Place</h3>
-          <p>Agriculture article classification; 2nd of 118 teams with feature engineering and model fine-tuning.</p>
-          <div class="tags">NLP · MACHINE LEARNING</div>
+          <h3>AI CUP 2021 — 2nd of 118 Teams</h3>
+          <div class="card-meta">National Agriculture Article Classification</div>
+          <p>Processed 350K+ Chinese terms, engineered statistical text features, and trained ensemble models (Random Forest, AdaBoost) reaching 0.816 F1.</p>
+          <div class="tags">NLP · ENSEMBLE MODELS</div>
         </div>
       </div>
     </div>
@@ -316,10 +391,10 @@
       <h2>Let's Connect</h2>
       <p>Open to Summer 2027 internships — feel free to reach out.</p>
       <div class="socials">
-        <a href="https://github.com/chungyingchang" target="_blank" aria-label="GitHub">
+        <a href="https://github.com/chungyingchang" target="_blank" rel="noopener" aria-label="GitHub">
           <svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/chungyingchang/" target="_blank" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/chungyingchang/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
         </a>
         <a href="mailto:chungying.joechang@gmail.com" aria-label="Email">
