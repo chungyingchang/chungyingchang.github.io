@@ -9,12 +9,12 @@ A single static page with no build step. It uses a blue-and-gold palette with Li
 | File | Purpose |
 | --- | --- |
 | `index.html` | The whole site: markup, CSS and the small nav script |
-| `photo.jpg` | Headshot (800×800). If it's missing, the initials "JC" show instead |
+| `images/photo.jpg` | Headshot (800×800). If it's missing, the initials "JC" show instead |
 | `resume.pdf` | CV. The "View Resume" button opens it in a new tab |
-| `gt-logo.jpg` | Georgia Tech icon (Education) |
-| `nthu-logo.jpg` | National Tsing Hua University icon (Education, Experience) |
-| `tsmc-logo.jpg` | TSMC icon (Experience) |
-| `trendmicro-logo.jpg` | Trend Micro icon (Experience) |
+| `images/gt-logo.jpg` | Georgia Tech icon (Education) |
+| `images/nthu-logo.jpg` | National Tsing Hua University icon (Education, Experience) |
+| `images/tsmc-logo.jpg` | TSMC icon (Experience) |
+| `images/trendmicro-logo.jpg` | Trend Micro icon (Experience) |
 | `.nojekyll` | Tells GitHub Pages to serve the files as-is, without running Jekyll |
 
 ## Editing
@@ -26,6 +26,11 @@ A single static page with no build step. It uses a blue-and-gold palette with Li
 - **Preview:** run `python3 -m http.server`, then open <http://localhost:8000>.
 
 ## Changelog
+
+### 2026-11-14 — Tidy-up
+
+- Moved all JPG images (headshot and logos) into `images/` and updated their paths.
+- Skills: split the single "AWS (Glue, Lambda, RDS, S3)" tag into separate AWS Glue, AWS Lambda, Amazon RDS and Amazon S3 tags.
 
 ### 2026-11-14 — Resume sync and logos
 
